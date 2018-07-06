@@ -1,2 +1,2 @@
 # yaml-repository
-test yaml repository for parseyaml git integration
+test yaml repository for refchef git integration
