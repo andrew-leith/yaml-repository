@@ -1,8 +1,4 @@
 reference-yaml:
-    configuration:
-        root-directory: /users/aleith/reference_yaml/references
-        break-on-error: true
-        verbose: true
     reference-entries:
         ucsc-hg19-concatenate:
             metadata:
