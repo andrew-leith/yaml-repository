@@ -7,7 +7,7 @@ reference-yaml:
                 organization: ucsc
                 downloader: aleith
             primary-reference:
-                retrieve: True
+                retrieve: true
                 command-sequence:
                     command-1: wget 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/*'
                     command-2: md5 *.fa.gz > postdownload-checksums.md5
@@ -16,9 +16,22 @@ reference-yaml:
                     command-5: rm chr*.fa
                     command-6: md5 *.fa > final-checksums.md5
             est:
-                retrieve: True
+                retrieve: true
                 command-sequence:
                     command-1: wget 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/est.fa.gz*'
+                    command-2: md5 *.fa.gz > postdownload-checksums.md5
+                    command-3: gunzip *.gz
+                    command-4: md5 *.fa > final-checksums.md5
+        ucsc-hg38:
+            metadata:
+                reference-name: ucsc-hg38
+                species: human
+                organization: ucsc
+                downloader: aleith
+            primary-reference:
+                retrieve: true
+                command-sequence:
+                    command-1: wget 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/*'
                     command-2: md5 *.fa.gz > postdownload-checksums.md5
                     command-3: gunzip *.gz
                     command-4: md5 *.fa > final-checksums.md5
