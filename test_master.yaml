@@ -72,12 +72,10 @@ ucsc_hg38:
         -   component: primary
             retrieve: true
             commands:
-            - wget 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/*'
-            - md5 *.fa.gz > postdownload_checksums.md5
+            - wget 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/*'
+            - md5 *.fa.gz > postdownload-checksums.md5
             - gunzip *.gz
-            - cat *.fa > hg19.fa
-            - rm chr*.fa
-            - md5 *.fa > final_checksums.md5
+            - md5 *.fa > final-checksums.md5
             index_files:
             -   uuid: null
                 file: null
@@ -94,7 +92,7 @@ ucsc_mm9:
         -   component: primary
             retrieve: true
             commands:
-            - wget 'ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/*'
+            - wget 'ftp://hgdownload.cse.ucsc.edu/goldenPath/mm9/chromosomes/*'
             - md5 *.fa.gz > postdownload_checksums.md5
             - gunzip *.gz
             - cat *.fa > hg19.fa
